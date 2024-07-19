@@ -61,4 +61,3 @@ function* iteratorFn() {
 let iterator = iteratorFn();
 console.log('iterator', iterator.next().value);
 console.log('iterator', iterator.next().value);
-console.log('iterator', iterator.next().value);

@@ -14,9 +14,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
         options: {
           modules: {
             auto: /\.module\./i,
-            localIdentName: isDev
-              ? '[path][name]__[local]'
-              : '[hash:base64:8]',
+            localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]',
           },
         },
       },
@@ -29,5 +27,17 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     use: 'ts-loader',
     exclude: /node_modules/,
   };
-  return [typescriptLoader, sassLoader];
+  const svgLoader = {
+    test: /\.svg$/,
+    use: ['@svgr/webpack'],
+  };
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+    use: [
+      {
+        loader: 'file-loader',
+      },
+    ],
+  };
+  return [typescriptLoader, sassLoader, svgLoader, fileLoader];
 }

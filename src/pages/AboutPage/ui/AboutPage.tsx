@@ -6,7 +6,8 @@ function AboutPage() {
   return (
     <h1>
       {t('page_about')}
-    </h1>);
+    </h1>
+  );
 }
 
 export default AboutPage;

@@ -2,5 +2,6 @@
   "navbar_home": "Главная",
   "navbar_about": "О сайте",
   "language": "Русский",
-  "page_main": "Главная страница"
+  "page_main": "Главная страница",
+  "NotFoundPage": "Страница не найдена"
 }

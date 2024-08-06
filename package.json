@@ -11,7 +11,8 @@
     "eslint-f": "npx eslint \"**/*.{ts,tsx}\" --fix",
     "stylelint": "npx stylelint \"**/*.scss\"",
     "stylelint-f": "npx stylelint \"**/*.scss\" --fix",
-    "jest": "jest --config ./config/jest/jest.config.ts"
+    "jest": "jest --config ./config/jest/jest.config.ts",
+    "test": "npm run jest && npm run eslint && npm run stylelint"
   },
   "keywords": [],
   "author": "",

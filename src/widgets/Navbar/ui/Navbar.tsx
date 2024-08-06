@@ -12,8 +12,19 @@ export function Navbar({ className }: NavbarProps) {
   return (
     <div className={classNames(cls.Navbar, [className])}>
       <div className={cls.links}>
-        <AppLink theme={AppLinkTheme.SECONDARY} to="/" className={cls.mainLinks}>{t('navbar_home')}</AppLink>
-        <AppLink theme={AppLinkTheme.SECONDARY} to="/about">{t('navbar_about')}</AppLink>
+        <AppLink
+          theme={AppLinkTheme.SECONDARY}
+          to="/"
+          className={cls.mainLinks}
+        >
+          {t('navbar_home')}
+        </AppLink>
+        <AppLink
+          theme={AppLinkTheme.SECONDARY}
+          to="/about"
+        >
+          {t('navbar_about')}
+        </AppLink>
       </div>
     </div>
   );

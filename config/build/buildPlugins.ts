@@ -3,7 +3,10 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack, { WebpackPluginInstance } from 'webpack';
 import { BuildOptions } from './types/config';
 
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+// eslint-disable-next-line import/no-extraneous-dependencies, @typescript-eslint/no-var-requires
+const ReactRefreshWebpackPlugin = require(
+  '@pmmmwh/react-refresh-webpack-plugin',
+);
 
 export function buildPlugins({
   paths,
